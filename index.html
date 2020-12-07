@@ -14,17 +14,17 @@
             .then(function (response) {
                 return response.json();
             })
-            .then(function (data) {
-                appendData(data);
+            .then(function (datas) {
+                appendData(datas);
             })
             .catch(function (err) {
                 console.log('error: ' + err);
             });
-        function appendData(data) {
+        function appendData(datas) {
             var mainContainer = document.getElementById("myData");
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 0; i < datas.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].data.first + ' ' + data[i].data.last;
+                div.innerHTML = 'Name: ' + datas[i].data.first + ' ' + datas[i].data.last;
                 mainContainer.appendChild(div);
             }
         }
