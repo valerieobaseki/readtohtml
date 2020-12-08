@@ -23,7 +23,7 @@
         function appendData(datas) {
             var mainContainer = document.getElementById("myData");
             let len = datas[i].data.length;
-            for (var i = 0; i < datas[i].data.length; i++) {
+            for (var i = 0; i < 3; i++) {
                 var div = document.createElement("div");
                 div.innerHTML = 'Name: ' + datas[i].data[i].first + ' ' + datas[i].data[i].last + ' ' + datas[i].data[i].phone + len;
                 mainContainer.appendChild(div);
