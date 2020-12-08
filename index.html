@@ -23,9 +23,9 @@
         function appendData(datas) {
             var mainContainer = document.getElementById("myData");
             
-            for (var i = 0; data.length; i++) {
+            for (var i = 0; datas.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + datas[i].firstName;
+                div.innerHTML = 'Name: ' + datas[i].data[i].first + ' ' + datas[i].data[i].last + ' ' + datas[i].data[i].phone + datas[i].firstName;
                 mainContainer.appendChild(div);
             }
         }
