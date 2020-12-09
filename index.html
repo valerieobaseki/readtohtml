@@ -14,18 +14,18 @@
             .then(function (response) {
                 return response.json();
             })
-            .then(function (datas) {
-                appendData(datas);
+            .then(function (data) {
+                appendData(data);
             })
             .catch(function (err) {
                 console.log('error: ' + err);
             });
-        function appendData(datas) {
+        function appendData(data) {
             var mainContainer = document.getElementById("myData");
             
-            for (var i = 0; i < datas.length; i++) {
+            for (var i = 0; i < data.contact.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + datas[i].data[i].first + datas.data.length;
+                div.innerHTML = 'Name: ' + data[i].contact[i].first + data.contact.length;
                 mainContainer.appendChild(div);
             }
         }
