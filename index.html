@@ -14,8 +14,8 @@
             .then(function (response) {
                 return response.json();
             })
-            .then(function (data) {
-                appendData(data);
+            .then(function (datas) {
+                appendData(datas);
             })
             .catch(function (err) {
                 console.log('error: ' + err);
@@ -23,9 +23,9 @@
         function appendData(data) {
             var mainContainer = document.getElementById("myData");
             
-            for (var i = 0; i < data.length; i++) {
+            for (var i = 0; i < datas.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].data[i].first + data.data.length;
+                div.innerHTML = 'Name: ' + datas[i].data[i].first + datas.data.length;
                 mainContainer.appendChild(div);
             }
         }
