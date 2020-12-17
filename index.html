@@ -23,9 +23,9 @@
         function appendData(data) {
             var mainContainer = document.getElementById("myData");
             
-            for (var i = 0; i < data.contact.length; i++) {
+            for (var i = 0; i < data.data.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Name: ' + data[i].contact[i].first + data.contact.length;
+                div.innerHTML = 'Name: ' + data[i].data[i].first + data.data.length;
                 mainContainer.appendChild(div);
             }
         }
